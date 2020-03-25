@@ -45,7 +45,7 @@ class _AllAddonPageState extends State<AllAddonPage>{
                         height: 300,
                         decoration:BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('8_1.png'))
+                            image: AssetImage('8_3.png'))
                         ),
                         child: RaisedButton(
                           child: Text(
