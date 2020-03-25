@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/additional_content.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: //MyHomePage(title: 'Flutter Demo Home Page'),
+      AddonPage(),
     );
   }
 }
@@ -98,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline,
             ),
           ],
         ),
