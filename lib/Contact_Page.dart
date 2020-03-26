@@ -97,13 +97,13 @@ class _ContactState extends State<ContactPage>{
                    Container(
                         margin: EdgeInsets.all(12),
                         width: 400,
-                        height: 7 * 24.0,
                         child: TextField(
+                            keyboardType: TextInputType.multiline,
+                            maxLines: 11,
                             selectionHeightStyle: BoxHeightStyle.max ,
                             decoration: InputDecoration(
                             fillColor: Color.fromRGBO(225, 204, 130, 0.22),
                             filled: true,
-                            hintMaxLines: 7,
                             hintText: 'Wiadomość',
                             ),
                               autofocus: false,
