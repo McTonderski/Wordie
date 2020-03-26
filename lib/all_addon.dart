@@ -9,120 +9,58 @@ class AllAddonPage extends StatefulWidget {
 }
 
 class _AllAddonPageState extends State<AllAddonPage> {
+  Widget addon(imagePath, textIn, textMain, textSec) {
+    return Container(
+      padding: const EdgeInsets.all(35.0),
+      child: Column(
+        children: <Widget>[
+          ClipOval(
+            child: Container(
+              width: 220,
+              height: 220,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(110, 85, 131, 84),
+                  image: DecorationImage(
+                      image: AssetImage(imagePath), fit: BoxFit.fitHeight)),
+              child: FlatButton(
+                child: Text(
+                  textIn,
+                  style: TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'SourceSerifPro',
+                      fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {},
+              ),
+            ),
+          ),
+          Text(
+            textMain,
+            style: TextStyle(
+                fontSize: 25,
+                fontFamily: 'SourceSerifPro',
+                fontWeight: FontWeight.bold),
+          ),
+          Text(
+            textSec,
+            style: TextStyle(
+              fontSize: 25,
+              fontFamily: 'SourceSerifPro',
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   List<Widget> addons() {
     return List.of([
-      Container(child:
-      Column(
-        children: <Widget>[
-          ClipOval(
-            child: Container(
-              width: 220,
-              height: 220,
-              
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(110, 85, 131, 84),
-                  image: DecorationImage(
-                    image: AssetImage('assets/8_1.png'),
-                    fit: BoxFit.fitHeight
-                    )
-                    ),
-              child: FlatButton(
-                
-                child: Text(
-                  'Pobierz \nza darmo',
-                  style: TextStyle(
-                    fontSize: 35,
-                    fontFamily: 'SourceSerifPro',
-                    fontWeight: FontWeight.bold
-                    ),
-                  
-                ),
-                onPressed: () {},
-              ),
-            ),
-          ),
-          Text(
-            'PLAKATY: Zaimki osobowe',
-            style: TextStyle(fontSize: 25, 
-            fontFamily: 'SourceSerifPro',
-            fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(
-            'Personlige pronomen',
-            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
-          )
-        ],
-      ),
-      ),
-      Container(child:
-      Column(
-        children: <Widget>[
-          ClipOval(
-            child: Container(
-              width: 220,
-              height: 220,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(110, 85, 131, 84),
-                  image: DecorationImage(
-                    image: AssetImage('assets/8_2.png'),
-                    fit: BoxFit.fitHeight
-                    )
-                    ),
-              child: FlatButton(
-                child: Text(
-                  '50 koron',
-                  style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,fontFamily: 'SourceSerifPro',),
-                ),
-                onPressed: () {},
-              ),
-            ),
-          ),
-          Text(
-            'ZADANIA: Zaimki osobowe',
-            style: TextStyle(fontSize: 25, fontFamily: 'SourceSerifPro',fontWeight: FontWeight.bold),
-          ),
-          Text(
-            'Personlige pronomen',
-            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
-          )
-        ],
-      ),
-      ),
-      Container(child:
-      Column(
-        children: <Widget>[
-          ClipOval(
-            child: Container(
-              width: 220,
-              height: 220,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(110, 85, 131, 84),
-                  image: DecorationImage(
-                    image: AssetImage('assets/8_3.png')
-                    ,fit: BoxFit.fitHeight
-                    )
-                    ),
-              child: FlatButton(
-                child: Text(
-                  'Pobierz \nza darmo',
-                  style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',fontWeight: FontWeight.bold,),
-                ),
-                onPressed: () {},
-              ),
-            ),
-          ),
-          Text(
-            'PLAKATY: Zaimki dzierżawcze ',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,fontFamily: 'SourceSerifPro',),
-          ),
-          Text(
-            'Eindomspronomen',
-            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
-          )
-        ],
-      )
-      )
+      addon('assets/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
+          'Personlige pronomen'),
+      addon('assets/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
+          'Personlige pronomen'),
+      addon('assets/8_3.png', 'Pobierz \nza darmo',
+          'PLAKATY: Zaimki dzierżawcze', 'Eindomspronomen')
     ]);
   }
 
@@ -151,28 +89,21 @@ class _AllAddonPageState extends State<AllAddonPage> {
                 )
               ],
             ),
-            Center(child: 
-            LayoutBuilder(builder: (context, constraints) {
+            Center(child: LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth > 600) {
-                // return SingleChildScrollView(
-                //     scrollDirection: Axis.horizontal,
-                    // child: 
-                    return Row(
+                return SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons());
-                        // );
+                        children: addons()));
               } else {
-                // return SingleChildScrollView(
-                //     scrollDirection: Axis.vertical,
-                    // child: 
-                    
-                    return Column(
+                return SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons());
-                        // );
+                        children: addons()));
               }
-            })
-            )
+            }))
           ],
         ),
       ),
