@@ -154,19 +154,22 @@ class _AllAddonPageState extends State<AllAddonPage> {
             Center(child: 
             LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth > 600) {
-                return SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                // return SingleChildScrollView(
+                //     scrollDirection: Axis.horizontal,
+                    // child: 
+                    return Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons())
-                        );
+                        children: addons());
+                        // );
               } else {
-                return SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Column(
+                // return SingleChildScrollView(
+                //     scrollDirection: Axis.vertical,
+                    // child: 
+                    
+                    return Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons())
-                        );
+                        children: addons());
+                        // );
               }
             })
             )
