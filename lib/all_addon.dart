@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/nav_bar.dart';
 
 class AllAddonPage extends StatefulWidget {
   AllAddonPage();
@@ -122,13 +123,15 @@ class _AllAddonPageState extends State<AllAddonPage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons()));
+                        children: addons())
+                        );
               } else {
                 return SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: addons()));
+                        children: addons())
+                        );
               }
             }))
           ],

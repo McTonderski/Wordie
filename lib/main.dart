@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wordie/drawer_widget.dart';
 import 'package:wordie/nav_bar.dart';
+import 'package:wordie/additional_content.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: //MyHomePage(title: 'Flutter Demo Home Page'),
-      MyHomePage(),
+      AddonPage(),
     );
   }
 }
