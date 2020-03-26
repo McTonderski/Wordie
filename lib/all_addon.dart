@@ -8,36 +8,10 @@ class AllAddonPage extends StatefulWidget{
 }
 
 class _AllAddonPageState extends State<AllAddonPage>{
-  Widget build(BuildContext context){
-    return Scaffold
-    (appBar: AppBar(),
-    body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Text(
-                "Dodatkowe materiały",
-                style: TextStyle(
-                fontSize: 40,
-                //fontFamily:  
-              ),
-              ),
-              Text(
-                "Wszystkie",
-                style: TextStyle(
-                  fontSize: 25,
-                ),
+  List <Widget> addons(){
 
-              )
-            ],
-          ),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Column(
+    return List.of([
+      Column(
                   children: <Widget>[
                     ClipOval(
                       child:Container(
@@ -45,7 +19,7 @@ class _AllAddonPageState extends State<AllAddonPage>{
                         height: 300,
                         decoration:BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('8_3.png'))
+                            image: AssetImage('assets/8_3.png'))
                         ),
                         child: RaisedButton(
                           child: Text(
@@ -137,12 +111,63 @@ class _AllAddonPageState extends State<AllAddonPage>{
                   ],
                 )
               
-              ],
-            ),
-          )
+    ]
+    );
+  }
+  
+  Widget build(BuildContext context){
+    return Scaffold
+    (appBar: AppBar(),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Text(
+                "Dodatkowe materiały",
+                style: TextStyle(
+                fontSize: 40,
+                //fontFamily:  
+              ),
+              ),
+              Text(
+                "Wszystkie",
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+
+              )
+            ],
+          ),
+          Center(
+            
+            child: LayoutBuilder(
+            
+              builder: (context,constraints){
+                if(constraints.maxWidth>600){
+                  return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: addons()
+                  )
+                  );
+                }
+                else{
+                  return SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: addons()
+                  )
+                  );
+                }
+              }) )
         ],
       ),
       ),
       );
   }
 }
+
