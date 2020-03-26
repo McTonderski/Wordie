@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wordie/widgets//drawer_widget.dart';
 import 'package:wordie/widgets/nav_bar.dart';
-import 'package:wordie/views/about_me.dart';
+import 'package:wordie/views/about_me_view.dart';
 
 void main() {
   runApp(MyApp());
