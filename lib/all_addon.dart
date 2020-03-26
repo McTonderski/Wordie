@@ -17,9 +17,16 @@ class _AllAddonPageState extends State<AllAddonPage> {
             child: Container(
               width: 300,
               height: 300,
+              
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/8_3.png'))),
-              child: RaisedButton(
+                  color: Colors.cyan,
+                  image: DecorationImage(
+                    image: AssetImage('assets/8_1.png'),
+                    fit: BoxFit.fitHeight
+                    )
+                    ),
+              child: FlatButton(
+                
                 child: Text(
                   'Pobierz za darmo',
                   style: TextStyle(fontSize: 30),
@@ -44,8 +51,14 @@ class _AllAddonPageState extends State<AllAddonPage> {
             child: Container(
               width: 300,
               height: 300,
-              //decoration
-              child: RaisedButton(
+              decoration: BoxDecoration(
+                  color: Colors.cyan,
+                  image: DecorationImage(
+                    image: AssetImage('assets/8_2.png'),
+                    fit: BoxFit.fitHeight
+                    )
+                    ),
+              child: FlatButton(
                 child: Text(
                   '50 koron',
                   style: TextStyle(fontSize: 30),
@@ -70,8 +83,14 @@ class _AllAddonPageState extends State<AllAddonPage> {
             child: Container(
               width: 300,
               height: 300,
-              //decoration
-              child: RaisedButton(
+              decoration: BoxDecoration(
+                  color: Colors.cyan,
+                  image: DecorationImage(
+                    image: AssetImage('assets/8_3.png')
+                    ,fit: BoxFit.fitHeight
+                    )
+                    ),
+              child: FlatButton(
                 child: Text(
                   'Pobierz za darmo',
                   style: TextStyle(fontSize: 30),
@@ -117,7 +136,8 @@ class _AllAddonPageState extends State<AllAddonPage> {
                 )
               ],
             ),
-            Center(child: LayoutBuilder(builder: (context, constraints) {
+            Center(child: 
+            LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth > 600) {
                 return SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
