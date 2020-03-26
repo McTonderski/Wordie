@@ -20,34 +20,38 @@ class _AddonPageState extends State<AddonPage>{
           Text(
             "Dodatkowe materiały",
             style: TextStyle(
-              fontSize: 40,
-              //fontFamily:  
+              fontSize: 48,
+              fontFamily: 'SourceSerifPro',  
             ),),
           Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+                
                 ClipOval(
+                  
                   child:Container(
-                    width: 300,
-                    height: 300,
+                    width: 220,
+                    height: 220,
+                    color: Color.fromARGB(110, 85, 131, 84),
                     //decoration
-                    child: RaisedButton(
+                    child: FlatButton(
                       child: Text(
                         'Wszystkie',
-                        style: TextStyle(fontSize: 30),),
+                        style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',),),
                       onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>AllAddonPage()));},
                     ),)
                 ,),
                 ClipOval(
                   child:Container(
-                    width: 300,
-                    height: 300,
+                    width: 220,
+                    height: 220,
+                    color: Color.fromARGB(110, 85, 131, 84),
                     //decoration
-                    child: RaisedButton(
+                    child: FlatButton(
                       child: Text(
                         'Darmowe',
-                      style: TextStyle(fontSize: 30),),
+                      style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',),),
                       onPressed: (){},
                     ),)
                 ,)

@@ -11,15 +11,16 @@ class AllAddonPage extends StatefulWidget {
 class _AllAddonPageState extends State<AllAddonPage> {
   List<Widget> addons() {
     return List.of([
+      Container(child:
       Column(
         children: <Widget>[
           ClipOval(
             child: Container(
-              width: 300,
-              height: 300,
+              width: 220,
+              height: 220,
               
               decoration: BoxDecoration(
-                  color: Colors.cyan,
+                  color: Color.fromARGB(110, 85, 131, 84),
                   image: DecorationImage(
                     image: AssetImage('assets/8_1.png'),
                     fit: BoxFit.fitHeight
@@ -28,8 +29,13 @@ class _AllAddonPageState extends State<AllAddonPage> {
               child: FlatButton(
                 
                 child: Text(
-                  'Pobierz za darmo',
-                  style: TextStyle(fontSize: 30),
+                  'Pobierz \nza darmo',
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontFamily: 'SourceSerifPro',
+                    fontWeight: FontWeight.bold
+                    ),
+                  
                 ),
                 onPressed: () {},
               ),
@@ -37,22 +43,27 @@ class _AllAddonPageState extends State<AllAddonPage> {
           ),
           Text(
             'PLAKATY: Zaimki osobowe',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, 
+            fontFamily: 'SourceSerifPro',
+            fontWeight: FontWeight.bold
+            ),
           ),
           Text(
             'Personlige pronomen',
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
           )
         ],
       ),
+      ),
+      Container(child:
       Column(
         children: <Widget>[
           ClipOval(
             child: Container(
-              width: 300,
-              height: 300,
+              width: 220,
+              height: 220,
               decoration: BoxDecoration(
-                  color: Colors.cyan,
+                  color: Color.fromARGB(110, 85, 131, 84),
                   image: DecorationImage(
                     image: AssetImage('assets/8_2.png'),
                     fit: BoxFit.fitHeight
@@ -61,7 +72,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
               child: FlatButton(
                 child: Text(
                   '50 koron',
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,fontFamily: 'SourceSerifPro',),
                 ),
                 onPressed: () {},
               ),
@@ -69,22 +80,24 @@ class _AllAddonPageState extends State<AllAddonPage> {
           ),
           Text(
             'ZADANIA: Zaimki osobowe',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, fontFamily: 'SourceSerifPro',fontWeight: FontWeight.bold),
           ),
           Text(
             'Personlige pronomen',
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
           )
         ],
       ),
+      ),
+      Container(child:
       Column(
         children: <Widget>[
           ClipOval(
             child: Container(
-              width: 300,
-              height: 300,
+              width: 220,
+              height: 220,
               decoration: BoxDecoration(
-                  color: Colors.cyan,
+                  color: Color.fromARGB(110, 85, 131, 84),
                   image: DecorationImage(
                     image: AssetImage('assets/8_3.png')
                     ,fit: BoxFit.fitHeight
@@ -92,8 +105,8 @@ class _AllAddonPageState extends State<AllAddonPage> {
                     ),
               child: FlatButton(
                 child: Text(
-                  'Pobierz za darmo',
-                  style: TextStyle(fontSize: 30),
+                  'Pobierz \nza darmo',
+                  style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',fontWeight: FontWeight.bold,),
                 ),
                 onPressed: () {},
               ),
@@ -101,13 +114,14 @@ class _AllAddonPageState extends State<AllAddonPage> {
           ),
           Text(
             'PLAKATY: Zaimki dzierżawcze ',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,fontFamily: 'SourceSerifPro',),
           ),
           Text(
             'Eindomspronomen',
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 25,fontFamily: 'SourceSerifPro',),
           )
         ],
+      )
       )
     ]);
   }
@@ -124,14 +138,15 @@ class _AllAddonPageState extends State<AllAddonPage> {
                 Text(
                   "Dodatkowe materiały",
                   style: TextStyle(
-                    fontSize: 40,
-                    //fontFamily:
+                    fontSize: 48,
+                    fontFamily: 'SourceSerifPro',
                   ),
                 ),
                 Text(
                   "Wszystkie",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 35,
+                    fontFamily: 'SourceSerifPro',
                   ),
                 )
               ],
@@ -153,7 +168,8 @@ class _AllAddonPageState extends State<AllAddonPage> {
                         children: addons())
                         );
               }
-            }))
+            })
+            )
           ],
         ),
       ),
