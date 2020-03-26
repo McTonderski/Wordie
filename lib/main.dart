@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordie/additional_content.dart';
-
+import 'package:wordie/drawer_widget.dart';
+import 'package:wordie/nav_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: //MyHomePage(title: 'Flutter Demo Home Page'),
-      AddonPage(),
+      MyHomePage(),
     );
   }
 }
@@ -71,11 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+      appBar: NavBarWordie(
+        title: Text("Wordie"),
+        appBar: AppBar(),
+        widgets: <Widget>[],
       ),
+      drawer: DrawerWidget(chosen: '1'),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
