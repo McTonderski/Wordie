@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wordie/widgets//drawer_widget.dart';
+import 'package:wordie/views/additional_content.dart';
+import 'package:wordie/views/all_addon.dart';
+import 'package:wordie/widgets/drawer_widget.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/views/about_me_view.dart';
 
@@ -16,7 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AboutMeView(),
+      home: AddonPage(),
+      routes: {
+        AllAddonPage.routeName: (context) => AllAddonPage(),
+        AddonPage.routeName:(context)=>AddonPage()
+      },
     );
   }
 }
