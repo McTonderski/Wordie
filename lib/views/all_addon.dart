@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wordie/nav_bar.dart';
+import 'package:wordie/widgets/nav_bar.dart';
 
 class AllAddonPage extends StatefulWidget {
   AllAddonPage();
@@ -55,11 +55,11 @@ class _AllAddonPageState extends State<AllAddonPage> {
 
   List<Widget> addons() {
     return List.of([
-      addon('assets/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
+      addon('assets/images/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
           'Personlige pronomen'),
-      addon('assets/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
+      addon('assets/images/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
           'Personlige pronomen'),
-      addon('assets/8_3.png', 'Pobierz \nza darmo',
+      addon('assets/images/8_3.png', 'Pobierz \nza darmo',
           'PLAKATY: Zaimki dzierżawcze', 'Eindomspronomen')
     ]);
   }

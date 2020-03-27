@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordie/all_addon.dart';
-import 'package:wordie/nav_bar.dart';
+import 'package:wordie/views/all_addon.dart';
+import 'package:wordie/widgets/nav_bar.dart';
 
 class AddonPage extends StatefulWidget {
   AddonPage();
