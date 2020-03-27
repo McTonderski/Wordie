@@ -33,6 +33,7 @@ class AboutMeView extends StatelessWidget{
               height: 548,
               child: Stack( 
                 children: <Widget>[
+                  Expanded(child:
                   Positioned(
                     top: 0,
                     left: 200,
@@ -42,7 +43,9 @@ class AboutMeView extends StatelessWidget{
                         fontSize: 48,
                       ),
                     ),
+                  )
                   ),
+                  Expanded(child:
                   Positioned(
                     left: 200,
                     bottom: 0,
@@ -61,8 +64,9 @@ class AboutMeView extends StatelessWidget{
                           )
                         )).toList()
                       ),
-                    ),
+                    ),)
                   ),
+                  
                   Positioned(
                     bottom: 0,
                     left: 368,

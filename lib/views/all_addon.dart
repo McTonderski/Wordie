@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 
 class AllAddonPage extends StatefulWidget {
+  static const routeName = '/AllAddon';
   AllAddonPage();
 
   @override
@@ -55,8 +56,8 @@ class _AllAddonPageState extends State<AllAddonPage> {
 
   List<Widget> addons() {
     return List.of([
-      addon('assets/Images/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
-          'Personlige pronomen'),
+      addon('assets/Images/8_1.png', 'Pobierz \nza darmo',
+          'PLAKATY: Zaimki osobowe', 'Personlige pronomen'),
       addon('assets/Images/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
           'Personlige pronomen'),
       addon('assets/Images/8_3.png', 'Pobierz \nza darmo',

@@ -3,6 +3,7 @@ import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 
 class AddonPage extends StatefulWidget {
+  static const routeName = '/Addon';
   AddonPage();
 
   @override
@@ -10,9 +11,9 @@ class AddonPage extends StatefulWidget {
 }
 
 class _AddonPageState extends State<AddonPage> {
-  Widget addon(textIn,[nextPage]) {
+  Widget addon(textIn, [nextPage]) {
     return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: ClipOval(
           child: Container(
             width: 220,
@@ -28,9 +29,10 @@ class _AddonPageState extends State<AddonPage> {
                 ),
               ),
               onPressed: () {
-                if(nextPage!=null){
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => nextPage));}
+                if (nextPage != '') {
+                  Navigator.pushNamed(context,nextPage
+                      );
+                }
               },
             ),
           ),
@@ -57,20 +59,24 @@ class _AddonPageState extends State<AddonPage> {
                   if (constraints.maxWidth > 600) {
                     return SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              addon('Wszystkie',AllAddonPage()),
-                              addon('Darmowe')
-                            ]));
+                        child: ClipRect(
+                            child: Container(
+                                width: constraints.maxWidth,
+                                child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      addon('Wszystkie', AllAddonPage.routeName),
+                                      addon('Darmowe')
+                                    ]))));
                   } else {
                     return SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              addon('Wszystkie',AllAddonPage()),
-                              addon('Darmowe',(){})
+                              addon('Wszystkie', AllAddonPage.routeName),
+                              addon('Darmowe', () {})
                             ]));
                   }
                 })
