@@ -30,7 +30,7 @@ class _AddonPageState extends State<AddonPage> {
               ),
               onPressed: () {
                 if (nextPage != '') {
-                  Navigator.pushNamed(context,nextPage
+                  Navigator.pushReplacementNamed(context,nextPage
                       );
                 }
               },
