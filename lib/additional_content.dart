@@ -10,10 +10,32 @@ class AddonPage extends StatefulWidget{
 }
 
 class _AddonPageState extends State<AddonPage>{
+Widget addon(textIn) {
+  
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal:100,vertical: 30),
+    child: ClipOval(
+                  
+                  child:Container(
+                    width: 220,
+                    height: 220,
+                    color: Color.fromARGB(110, 85, 131, 84),
+                    //decoration
+                    child: FlatButton(
+                      child: Text(
+                        textIn,
+                        style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',),),
+                      onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>AllAddonPage()));},
+                    ),)
+                ,));
+  }
+
   Widget build(BuildContext context){
     return Scaffold
     (appBar: AppBar(),
     body: Center(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -23,44 +45,42 @@ class _AddonPageState extends State<AddonPage>{
               fontSize: 48,
               fontFamily: 'SourceSerifPro',  
             ),),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
+          Center(child: LayoutBuilder(builder: (context, constraints) {
+              if (constraints.maxWidth > 600) {
+                return SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
                 
-                ClipOval(
-                  
-                  child:Container(
-                    width: 220,
-                    height: 220,
-                    color: Color.fromARGB(110, 85, 131, 84),
-                    //decoration
-                    child: FlatButton(
-                      child: Text(
-                        'Wszystkie',
-                        style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',),),
-                      onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>AllAddonPage()));},
-                    ),)
-                ,),
-                ClipOval(
-                  child:Container(
-                    width: 220,
-                    height: 220,
-                    color: Color.fromARGB(110, 85, 131, 84),
-                    //decoration
-                    child: FlatButton(
-                      child: Text(
-                        'Darmowe',
-                      style: TextStyle(fontSize: 35,fontFamily: 'SourceSerifPro',),),
-                      onPressed: (){},
-                    ),)
-                ,)
-              ],
-            ),
+                addon('Wszystkie'),
+                addon('Darmowe')
+              ]));
+              } else {
+                return SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                
+                addon('Wszystkie'),
+                addon('Darmowe')
+              ]));
+              }
+            })
+            // child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: <Widget>[
+                
+            //     addon('Wszystkie'),
+            //     addon('Darmowe')
+            //   ],
+            // ),
           )
         ],
       ),
       ),
-      );
+      ));
   }
 }

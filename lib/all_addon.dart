@@ -11,7 +11,7 @@ class AllAddonPage extends StatefulWidget {
 class _AllAddonPageState extends State<AllAddonPage> {
   Widget addon(imagePath, textIn, textMain, textSec) {
     return Container(
-      padding: const EdgeInsets.all(35.0),
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       child: Column(
         children: <Widget>[
           ClipOval(
@@ -68,6 +68,8 @@ class _AllAddonPageState extends State<AllAddonPage> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
+          child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -100,13 +102,13 @@ class _AllAddonPageState extends State<AllAddonPage> {
                 return SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: addons()));
               }
             }))
           ],
         ),
-      ),
+      )),
     );
   }
 }
