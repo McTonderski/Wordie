@@ -55,11 +55,11 @@ class _AllAddonPageState extends State<AllAddonPage> {
 
   List<Widget> addons() {
     return List.of([
-      addon('assets/images/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
+      addon('assets/Images/8_1.png', 'Pobierz \nza darmo', 'PLAKATY: Zaimki osobowe',
           'Personlige pronomen'),
-      addon('assets/images/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
+      addon('assets/Images/8_2.png', '50 koron', 'ZADANIA: Zaimki osobowe',
           'Personlige pronomen'),
-      addon('assets/images/8_3.png', 'Pobierz \nza darmo',
+      addon('assets/Images/8_3.png', 'Pobierz \nza darmo',
           'PLAKATY: Zaimki dzierżawcze', 'Eindomspronomen')
     ]);
   }
