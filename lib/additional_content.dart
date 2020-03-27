@@ -10,7 +10,7 @@ class AddonPage extends StatefulWidget {
 }
 
 class _AddonPageState extends State<AddonPage> {
-  Widget addon(textIn) {
+  Widget addon(textIn,[nextPage]) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
         child: ClipOval(
@@ -28,8 +28,9 @@ class _AddonPageState extends State<AddonPage> {
                 ),
               ),
               onPressed: () {
+                if(nextPage!=null){
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AllAddonPage()));
+                    MaterialPageRoute(builder: (context) => nextPage));}
               },
             ),
           ),
@@ -59,7 +60,7 @@ class _AddonPageState extends State<AddonPage> {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              addon('Wszystkie'),
+                              addon('Wszystkie',AllAddonPage()),
                               addon('Darmowe')
                             ]));
                   } else {
@@ -68,8 +69,8 @@ class _AddonPageState extends State<AddonPage> {
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              addon('Wszystkie'),
-                              addon('Darmowe')
+                              addon('Wszystkie',AllAddonPage()),
+                              addon('Darmowe',(){})
                             ]));
                   }
                 })
