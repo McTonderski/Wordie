@@ -1,8 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:wordie/widgets/nav_bar.dart';
 
 class AboutMeView extends StatelessWidget{
+
+  static const routeName = '/about_me';
 
   final  List<String> ABOUT_ME = ['Mam na imię Angelika, choć większość osob nazywa mnie Angie.',
                                   "",
@@ -20,11 +23,7 @@ class AboutMeView extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('wordie'),
-        centerTitle: true,
-      ),
+      appBar: NavBarWordie(title: Text('Wordie'), appBar: AppBar(), widgets: <Widget>[],),
       body: SingleChildScrollView(
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -89,7 +88,7 @@ class AboutMeView extends StatelessWidget{
                           top: 52,
                           right: 175,
                           child: CircleAvatar(
-                            backgroundImage: AssetImage('assets/Images/11.png'),
+                            backgroundImage: AssetImage('assets/images/11.png'),
                             radius: 193,
                           ),
                         ),
