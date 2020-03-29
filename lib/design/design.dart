@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 //colors
 final Color primaryBackgroundColor = Color(0xFFE5E5E5);
+final Color navBarLogInColor = Color(0xFFE1CC82);
 
 //fonts
 final String primaryFont = 'SourceSerifPro';

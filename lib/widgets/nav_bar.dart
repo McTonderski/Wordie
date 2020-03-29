@@ -13,21 +13,43 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
       backgroundColor: primaryBackgroundColor,
       centerTitle: true,
       elevation: 0,
-      flexibleSpace: Column(
-        children: <Widget>[
-          SizedBox(height: 20,),
-          Image(
-            image: AssetImage(navBarLogo)
+      flexibleSpace: Stack(
+        children : <Widget>[
+          Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 20,),
+                Image(
+                  image: AssetImage(navBarLogo)
+                ),
+                Divider(
+                  height: 17,
+                  thickness: 2,
+                  color: Color(0xFF959595),
+                  indent: 105.0,
+                  endIndent: 105.0,
+                ),
+                SizedBox(height: 1)
+              ],
+            ),
           ),
-          Divider(
-            height: 17,
-            thickness: 2,
-            color: Color(0xFF959595),
-            indent: 105.0,
-            endIndent: 105.0,
-          ),
-          SizedBox(height: 1)
-        ],
+          Positioned(
+            top: 25, 
+            right: 105,
+            child: FlatButton(
+              onPressed: () {},
+              color: navBarLogInColor,
+              padding: EdgeInsets.fromLTRB(40, 3, 40, 2),
+              child: Text(
+                'Zaloguj się',
+                style: TextStyle(
+                  fontFamily: primaryFont,
+                  fontSize: 18
+                )
+              )
+            )
+          )
+        ]
       ),
     );
   }
