@@ -1,7 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:wordie/widgets/nav_bar.dart';
+import 'package:wordie/design/design.dart';
 
 class AboutMeView extends StatelessWidget{
 
@@ -23,7 +23,8 @@ class AboutMeView extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: NavBarWordie(title: Text('Wordie'), appBar: AppBar(), widgets: <Widget>[],),
+      backgroundColor: primaryBackgroundColor,
+      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
       body: SingleChildScrollView(
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -64,7 +65,7 @@ class AboutMeView extends StatelessWidget{
                                 style: TextStyle(
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
-                                  fontFamily: 'SourceSerifPro'
+                                  fontFamily: primaryFont
                                 )
                               )).toList()
                             ),
