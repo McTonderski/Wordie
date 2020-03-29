@@ -33,7 +33,7 @@ class AboutMeView extends StatelessWidget{
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(height: 94.0,),
+                SizedBox(height: 50.0,),
                 Padding(
                   padding: EdgeInsets.fromLTRB(104, 0, 105, 0),
                   child: Container(
@@ -96,7 +96,8 @@ class AboutMeView extends StatelessWidget{
                       ],
                     ),
                   ),
-                )
+                ),
+                SizedBox(height: 20,)
               ],
             ),
           ),
