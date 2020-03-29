@@ -14,12 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: AddonPage(),
+      initialRoute: AboutMeView.routeName,
       routes: {
+        AboutMeView.routeName: (context) => AboutMeView(),
         AllAddonPage.routeName: (context) => AllAddonPage(),
         AddonPage.routeName:(context)=>AddonPage()
       },
