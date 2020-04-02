@@ -4,6 +4,7 @@ import 'package:wordie/views/Contact_Page.dart';
 import 'package:wordie/views/about_me_view.dart';
 import 'package:wordie/views/additional_content.dart';
 import 'package:wordie/views/all_addon.dart';
+import 'package:wordie/widgets/login_button.dart';
 import '../views/about_me_view.dart';
 import '../views/additional_content.dart';
 
@@ -22,6 +23,12 @@ class DrawerItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String currentRoute = getCurrentRouteName(context);
+
+    
+    double window_width = MediaQuery.of(context).size.width;
+    double window_height = MediaQuery.of(context).size.height;
+    double width_ratio = window_width/WINDOW_WIDTH;
+    double height_ratio = window_height/WINDOW_HEIGHT;
 
     return Container(
       width: WINDOW_WIDTH*0.15,
@@ -92,6 +99,7 @@ class DrawerItemList extends StatelessWidget {
               );
             },
           ),
+          LoginButton(window_height: window_height, window_width: window_width, width_ratio: width_ratio, height_ratio: height_ratio,)
         ],
       ),
     );
