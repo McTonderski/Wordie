@@ -50,7 +50,7 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
                         'Zaloguj się',
                         style: TextStyle(
                           fontFamily: primaryFont,
-                          fontSize: 18*height_ratio
+                          fontSize: 18*sqrt(height_ratio)
                         )
                       )
                     )
