@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/design/design.dart';
+import 'package:wordie/widgets/drawer_widget.dart';
+
+import '../widgets/drawer_widget.dart';
 
 class AboutMeView extends StatelessWidget{
 
@@ -29,6 +32,7 @@ class AboutMeView extends StatelessWidget{
     return Scaffold(
       backgroundColor: primaryBackgroundColor,
       appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+      drawer: DrawerItemList(),
       body: SafeArea(
         child: Center(
           child: ListView(
