@@ -102,19 +102,21 @@ class AboutMeView extends StatelessWidget{
                                 height: 465*height_ratio,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 10*height_ratio),
-                                  child: ListView.builder(
-                                    itemCount: ABOUT_ME.length,
-                                    shrinkWrap: true,
-                                    itemBuilder: (context, sentence){
-                                    return Text(
-                                      ABOUT_ME[sentence],
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w300,
-                                        fontSize: 16*sqrt(sqrt(height_ratio)),
-                                        fontFamily: primaryFont
-                                      )
-                                    );
-                                    }
+                                  child: Scrollbar(
+                                    child: ListView.builder(
+                                      itemCount: ABOUT_ME.length,
+                                      shrinkWrap: true,
+                                      itemBuilder: (context, sentence){
+                                      return Text(
+                                        ABOUT_ME[sentence],
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w300,
+                                          fontSize: 16*sqrt(sqrt(height_ratio)),
+                                          fontFamily: primaryFont
+                                        )
+                                      );
+                                      }
+                                    ),
                                   ),
                                 ),
                               ),
