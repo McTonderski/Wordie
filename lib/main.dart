@@ -7,7 +7,6 @@ import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/views/about_me_view.dart';
 
 import 'views/about_me_view.dart';
-import 'views/about_me_view.dart';
 import 'views/all_addon.dart';
 
 void main() {
@@ -19,9 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      debugShowCheckedModeBanner: false,
       initialRoute: AboutMeView.routeName,
       routes: {
+        ContactPage.routeName: (context) => ContactPage(),
         AboutMeView.routeName: (context) => AboutMeView(),
         AllAddonPage.routeName: (context) => AllAddonPage(),
         AddonPage.routeName:(context)=>AddonPage()

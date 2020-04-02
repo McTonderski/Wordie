@@ -18,6 +18,7 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
 
     return SafeArea(
       child: AppBar(
+        leading: new Container(),
         backgroundColor: primaryBackgroundColor,
         centerTitle: true,
         elevation: 0,
@@ -30,7 +31,7 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('drawer'),
+                    IconButton(icon: new Icon(Icons.apps), onPressed: () => Scaffold.of(context).openDrawer()),
                     Container(
                       constraints: BoxConstraints(maxHeight: 66*sqrt(height_ratio) , maxWidth: 247*sqrt(width_ratio)),
                       child: FittedBox(
