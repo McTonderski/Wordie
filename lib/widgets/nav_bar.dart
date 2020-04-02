@@ -1,13 +1,10 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
 
 class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
   final Text title;
   final List<Widget> widgets;
-  final WINDOW_WIDTH = 1536;
-  final WINDOW_HEIGHT = 763.2000122070312;
   const NavBarWordie({Key key, this.title = const Text('Wordie'), this.widgets})
       : super(key: key);
 
@@ -16,8 +13,8 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
 
     double window_width = MediaQuery.of(context).size.width;
     double window_height = MediaQuery.of(context).size.height;
-    double width_ratio = window_width/this.WINDOW_WIDTH;
-    double height_ratio = window_height/this.WINDOW_HEIGHT;
+    double width_ratio = window_width/WINDOW_WIDTH;
+    double height_ratio = window_height/WINDOW_HEIGHT;
 
     return SafeArea(
       child: AppBar(

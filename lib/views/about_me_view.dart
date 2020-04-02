@@ -18,91 +18,80 @@ class AboutMeView extends StatelessWidget{
                                   "Do zobaczenia wkrótce!",
                                   "Håper vi ses snart!"];
 
-  final double WINDOW_WIDTH = 1536.0;
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: primaryBackgroundColor,
       appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
-      body: SingleChildScrollView(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Container(
-            constraints: BoxConstraints(maxWidth: this.WINDOW_WIDTH),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                SizedBox(height: 50.0,),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(104, 0, 105, 0),
-                  child: Container(
-                    width: 943,
-                    height: 548,
-                    child: Stack( 
-                      children: <Widget>[
-                        Positioned(
-                          top: 0,
-                          left: 200,
-                          child: Text(
-                            'Poznaj mnie',
-                            style: TextStyle(
-                              fontSize: 48,
-                            ),
-                          ),
+      body: ListView(
+          children: <Widget>[
+            SizedBox(height: 50.0,),
+            Padding(
+              padding: EdgeInsets.fromLTRB(104, 0, 105, 0),
+              child: Container(
+                width: 943,
+                height: 548,
+                child: Stack( 
+                  children: <Widget>[
+                    Positioned(
+                      top: 0,
+                      left: 200,
+                      child: Text(
+                        'Poznaj mnie',
+                        style: TextStyle(
+                          fontSize: 48,
                         ),
-                        Positioned(
-                          left: 200,
-                          bottom: 0,
-                          child: Container(
-                            width: 481,
-                            height: 465,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: ABOUT_ME.map((sentece) => Text(
-                                sentece,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                  fontFamily: primaryFont
-                                )
-                              )).toList()
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          left: 368,
-                          right: 91,
-                          top: 73,
-                          child: Container(
-                            width: 484,
-                            height: 475,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xFFB6CAB5)
-                              )
-                            ),
-                        ),
-                        Positioned(
-                          top: 52,
-                          right: 175,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage('assets/images/11.png'),
-                            radius: 193,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      left: 200,
+                      bottom: 0,
+                      child: Container(
+                        width: 481,
+                        height: 465,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: ABOUT_ME.map((sentece) => Text(
+                            sentece,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                              fontFamily: primaryFont
+                            )
+                          )).toList()
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 368,
+                      right: 91,
+                      top: 73,
+                      child: Container(
+                        width: 484,
+                        height: 475,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color(0xFFB6CAB5)
+                          )
+                        ),
+                    ),
+                    Positioned(
+                      top: 52,
+                      right: 175,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/images/11.png'),
+                        radius: 193,
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 20,)
-              ],
+              ),
             ),
-          ),
+            SizedBox(height: 20,)
+          ],
         ),
-      )
     );
   }
 
