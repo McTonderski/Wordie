@@ -67,7 +67,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
       body: Center(
           child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
