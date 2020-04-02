@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wordie/Contact_Page.dart';
+import 'package:wordie/views/Contact_Page.dart';
 
 void main() {
   runApp(MyApp());
