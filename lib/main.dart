@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/views/Contact_Page.dart';
 import 'package:wordie/views/additional_content.dart';
 import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/drawer_widget.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       initialRoute: AboutMeView.routeName,
       routes: {
         AboutMeView.routeName: (context) => AboutMeView(),
