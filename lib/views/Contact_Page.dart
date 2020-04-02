@@ -15,6 +15,7 @@ class ContactPage extends StatefulWidget{
 class _ContactState extends State<ContactPage>{
   Widget build(BuildContext context){
     return Scaffold(
+      drawerScrimColor: Colors.transparent,
       appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,

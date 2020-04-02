@@ -55,7 +55,7 @@ class DrawerItemList extends StatelessWidget {
           ),
           ListTile(
             title: Text('Dodatkowe materiały'),
-            leading: Icon(Icons.graphic_eq),
+            leading: Icon(Icons.assignment),
             selected: currentRoute == AddonPage.routeName,
             onTap: () {
               if (currentRoute == AddonPage.routeName) return;
@@ -68,7 +68,7 @@ class DrawerItemList extends StatelessWidget {
           ),
           ListTile(
             title: Text('Poznaj mnie'),
-            leading: Icon(Icons.graphic_eq),
+            leading: Icon(Icons.person_outline),
             selected: currentRoute == AboutMeView.routeName,
             onTap: () {
               if (currentRoute == AboutMeView.routeName) return;
@@ -81,7 +81,7 @@ class DrawerItemList extends StatelessWidget {
           ),
           ListTile(
             title: Text('Kontakt'),
-            leading: Icon(Icons.graphic_eq),
+            leading: Icon(Icons.mail),
             selected: currentRoute == ContactPage.routeName,
             onTap: () {
               if (currentRoute == ContactPage.routeName) return;

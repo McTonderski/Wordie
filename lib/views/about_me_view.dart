@@ -30,6 +30,7 @@ class AboutMeView extends StatelessWidget{
     double width_ratio = MediaQuery.of(context).size.width/WINDOW_WIDTH;
 
     return Scaffold(
+      drawerScrimColor: Colors.transparent,
       backgroundColor: primaryBackgroundColor,
       appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
       drawer: DrawerItemList(),
