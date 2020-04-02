@@ -1,60 +1,94 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/views/about_me_view.dart';
+import 'package:wordie/views/additional_content.dart';
+import 'package:wordie/views/all_addon.dart';
+import '../views/about_me_view.dart';
+import '../views/additional_content.dart';
 
-class DrawerWidget extends StatelessWidget {
-  final chosen;
-  const DrawerWidget({Key key, @required this.chosen}) : super(key: key);
+class DrawerItemList extends StatelessWidget {
+  String getCurrentRouteName(context) {
+    String currentRouteName;
 
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: <Color>[
-                  Colors.white,
-                  Colors.white70
-                ]
-              )
-            ), 
-            child: Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CustomListTile(
-                    name: Text("Strona Główna", style: TextStyle(fontSize: 16.0),),
-                    icon: Icon(Icons.home)
-                  )
-                ],)
-            ),
-          )
-        ]
-      ),
-    );
+    Navigator.popUntil(context, (route) {
+      currentRouteName = route.settings.name;
+      return true;
+    });
+
+    return currentRouteName;
   }
-}
-
-class CustomListTile extends StatelessWidget {
-  final Text name;
-  final Icon icon;
-  const CustomListTile({Key key, @required this.name, @required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){},
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget> [
-          icon,
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: name,
-          )
-        ]
-      ),
+    String currentRoute = getCurrentRouteName(context);
+
+    return Column(
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.home),
+          title: Text('Strona Główna'),
+          selected: currentRoute == AboutMeView.routeName,
+          onTap: () {
+            if (currentRoute == AboutMeView.routeName) return;
+            currentRoute = AboutMeView.routeName;
+            Navigator.pushReplacementNamed(
+              context,
+              AboutMeView.routeName,
+            );
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.list),
+          title: Text('Kurs'),
+          selected: currentRoute == AddonPage.routeName,
+          onTap: () {
+            if (currentRoute == AddonPage.routeName) return;
+            currentRoute = AddonPage.routeName;
+            Navigator.pushReplacementNamed(
+              context,
+              AddonPage.routeName,
+            );
+          },
+        ),
+        ListTile(
+          title: Text('Dodatkowe materiały'),
+          leading: Icon(Icons.graphic_eq),
+          selected: currentRoute == AddonPage.routeName,
+          onTap: () {
+            if (currentRoute == AddonPage.routeName) return;
+            currentRoute = AddonPage.routeName;
+            Navigator.pushReplacementNamed(
+              context,
+              AddonPage.routeName,
+            );
+          },
+        ),
+        ListTile(
+          title: Text('Poznaj mnie'),
+          leading: Icon(Icons.graphic_eq),
+          selected: currentRoute == AboutMeView.routeName,
+          onTap: () {
+            if (currentRoute == AboutMeView.routeName) return;
+            currentRoute = AboutMeView.routeName;
+            Navigator.pushReplacementNamed(
+              context,
+              AboutMeView.routeName,
+            );
+          },
+        ),
+        // ListTile(
+        //   title: Text('Kontakt'),
+        //   leading: Icon(Icons.graphic_eq),
+        //   selected: currentRoute == AppRoutes.planning,
+        //   onTap: () {
+        //     if (currentRoute == AppRoutes.planning) return;
+
+        //     Navigator.pushReplacementNamed(
+        //       context,
+        //       AppRoutes.planning,
+        //     );
+        //   },
+        // ),
+      ],
     );
   }
 }

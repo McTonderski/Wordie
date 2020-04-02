@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 
+import '../widgets/drawer_widget.dart';
+import '../widgets/nav_bar.dart';
+
 class AddonPage extends StatefulWidget {
   static const routeName = '/Addon';
   AddonPage();
@@ -41,7 +44,8 @@ class _AddonPageState extends State<AddonPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+        drawer: DrawerItemList(),
         body: Center(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
