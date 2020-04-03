@@ -32,7 +32,7 @@ class AboutMeView extends StatelessWidget{
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       backgroundColor: primaryBackgroundColor,
-      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+      appBar: NavBarWordie(),
       drawer: DrawerItemList(),
       body: SafeArea(
         child: Center(
@@ -83,7 +83,7 @@ class AboutMeView extends StatelessWidget{
                             opacity: calculateOpacity(context),
                             child: CircleAvatar(
                               backgroundImage: AssetImage('assets/images/11.png'),
-                              radius: 193*sqrt(width_ratio*height_ratio),
+                              radius: 193*sqrt(width_ratio*pow(height_ratio,2 )),
                             ),
                           ),
                         ),

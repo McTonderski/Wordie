@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:wordie/design/design.dart';
 import 'package:wordie/widgets/drawer_widget.dart';
 
 import '../widgets/nav_bar.dart';
@@ -17,10 +18,8 @@ class _ContactState extends State<ContactPage> {
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       drawer: DrawerItemList(),
-      appBar: NavBarWordie(
-        title: Text('Wordie'),
-        widgets: <Widget>[],
-      ),
+      appBar: NavBarWordie(),
+      backgroundColor: primaryBackgroundColor,
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,

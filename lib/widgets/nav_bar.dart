@@ -4,9 +4,8 @@ import 'package:wordie/design/design.dart';
 import 'package:wordie/widgets/login_button.dart';
 
 class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
-  final Text title;
-  final List<Widget> widgets;
-  const NavBarWordie({Key key, this.title = const Text('Wordie'), this.widgets})
+
+  const NavBarWordie({Key key})
       : super(key: key);
 
   @override
@@ -44,7 +43,7 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
                         ),
                       ),
                     ),
-                    LoginButton(window_height: window_height, window_width: window_width, width_ratio: width_ratio, height_ratio: height_ratio,)
+                    LoginButton(width_ratio: width_ratio, height_ratio: height_ratio,)
                   ],
                 ),
               ),

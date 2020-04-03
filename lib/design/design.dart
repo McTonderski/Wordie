@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 //colors
 final Color primaryBackgroundColor = Color(0xFFE5E5E5);
 final Color navBarLogInColor = Color(0xFFE1CC82);
+final Color drawerColor = Color(0xFF558354);
+final Color textColorBlack = Color(0xFF1A1A1A);
 
 //fonts
 final String primaryFont = 'SourceSerifPro';
@@ -19,9 +21,9 @@ final WINDOW_HEIGHT = 763.2000122070312;
 //opacity
 double calculateOpacity(BuildContext context){
   double aspect_ratio = MediaQuery.of(context).size.width*MediaQuery.of(context).size.height/(WINDOW_HEIGHT*WINDOW_WIDTH);
-  if (aspect_ratio > 0.55){
+  if (aspect_ratio > 0.6){
     return 1;
-  }else if(aspect_ratio > 0.45){
+  }else if(aspect_ratio > 0.55){
     return aspect_ratio;
   }else{
     return 0;
