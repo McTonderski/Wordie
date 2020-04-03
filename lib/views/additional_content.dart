@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/design/design.dart';
 import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 
@@ -46,6 +47,7 @@ class _AddonPageState extends State<AddonPage> {
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       appBar: NavBarWordie(),
+      backgroundColor: primaryBackgroundColor,
       drawer: DrawerItemList(),
       body: Center(
         child: SingleChildScrollView(
