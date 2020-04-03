@@ -83,7 +83,7 @@ class AboutMeView extends StatelessWidget{
                             opacity: calculateOpacity(context),
                             child: CircleAvatar(
                               backgroundImage: AssetImage('assets/images/11.png'),
-                              radius: 193*sqrt(width_ratio*height_ratio),
+                              radius: 193*sqrt(width_ratio*pow(height_ratio,2 )),
                             ),
                           ),
                         ),

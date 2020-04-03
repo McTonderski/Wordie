@@ -32,72 +32,123 @@ class DrawerItemList extends StatelessWidget {
 
     return Container(
       width: WINDOW_WIDTH*0.15,
+      color: drawerColor,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Strona Główna'),
-            selected: currentRoute == AboutMeView.routeName,
-            onTap: () {
-              if (currentRoute == AboutMeView.routeName) return;
-              currentRoute = AboutMeView.routeName;
-              Navigator.pushReplacementNamed(
-                context,
-                AboutMeView.routeName,
-              );
-            },
+          ListTileTheme(
+            selectedColor: navBarLogInColor,
+            textColor: textColorBlack,
+            child: ListTile(
+              leading: Icon(Icons.home),
+              title: Text(
+                'Strona Główna',
+                style: TextStyle(
+                  fontFamily: primaryFont
+                )
+                ),
+              selected: currentRoute == AboutMeView.routeName,
+              onTap: () {
+                if (currentRoute == AboutMeView.routeName) return;
+                currentRoute = AboutMeView.routeName;
+                Navigator.pushReplacementNamed(
+                  context,
+                  AboutMeView.routeName,
+                );
+              },
+            ),
           ),
-          ListTile(
-            leading: Icon(Icons.list),
-            title: Text('Kurs'),
-            selected: currentRoute == AddonPage.routeName,
-            onTap: () {
-              if (currentRoute == AddonPage.routeName) return;
-              currentRoute = AddonPage.routeName;
-              Navigator.pushReplacementNamed(
-                context,
-                AddonPage.routeName,
-              );
-            },
+          ListTileTheme(
+            selectedColor: navBarLogInColor,
+            textColor: textColorBlack,
+            child: ListTile(
+              leading: Icon(Icons.list),
+              title: Text(
+                'Kurs',
+                style: TextStyle(
+                  color: textColorBlack,
+                  fontFamily: primaryFont
+                )
+                ),
+              selected: currentRoute == AddonPage.routeName,
+              onTap: () {
+                if (currentRoute == AddonPage.routeName) return;
+                currentRoute = AddonPage.routeName;
+                Navigator.pushReplacementNamed(
+                  context,
+                  AddonPage.routeName,
+                );
+              },
+            ),
           ),
-          ListTile(
-            title: Text('Dodatkowe materiały'),
-            leading: Icon(Icons.assignment),
-            selected: currentRoute == AddonPage.routeName,
-            onTap: () {
-              if (currentRoute == AddonPage.routeName) return;
-              currentRoute = AddonPage.routeName;
-              Navigator.pushReplacementNamed(
-                context,
-                AddonPage.routeName,
-              );
-            },
+          ListTileTheme(
+            selectedColor: navBarLogInColor,
+            textColor: textColorBlack,
+            child: ListTile(
+              title: Text(
+                'Dodatkowe materialy',
+                style: TextStyle(
+                  color: textColorBlack,
+                  fontFamily: primaryFont
+                )
+                ),
+              leading: Icon(Icons.assignment),
+              selected: currentRoute == AddonPage.routeName,
+              onTap: () {
+                if (currentRoute == AddonPage.routeName) return;
+                currentRoute = AddonPage.routeName;
+                Navigator.pushReplacementNamed(
+                  context,
+                  AddonPage.routeName,
+                );
+              },
+            ),
           ),
-          ListTile(
-            title: Text('Poznaj mnie'),
-            leading: Icon(Icons.person_outline),
-            selected: currentRoute == AboutMeView.routeName,
-            onTap: () {
-              if (currentRoute == AboutMeView.routeName) return;
-              currentRoute = AboutMeView.routeName;
-              Navigator.pushReplacementNamed(
-                context,
-                AboutMeView.routeName,
-              );
-            },
+          ListTileTheme(
+            selectedColor: navBarLogInColor,
+            textColor: textColorBlack,
+            child: ListTile(
+              title: Text(
+                'Poznaj mnie',
+                style: TextStyle(
+                  color: textColorBlack,
+                  fontFamily: primaryFont
+                )
+                ),
+              leading: Icon(Icons.person_outline),
+              selected: currentRoute == AboutMeView.routeName,
+              onTap: () {
+                if (currentRoute == AboutMeView.routeName) return;
+                currentRoute = AboutMeView.routeName;
+                Navigator.pushReplacementNamed(
+                  context,
+                  AboutMeView.routeName,
+                );
+              },
+            ),
           ),
-          ListTile(
-            title: Text('Kontakt'),
-            leading: Icon(Icons.mail),
-            selected: currentRoute == ContactPage.routeName,
-            onTap: () {
-              if (currentRoute == ContactPage.routeName) return;
-              currentRoute = ContactPage.routeName;
-              Navigator.pushReplacementNamed(
-                context,
-                ContactPage.routeName,
-              );
-            },
+          ListTileTheme(
+            selectedColor: navBarLogInColor,
+            textColor: textColorBlack,
+            child: ListTile(
+              title: Text(
+                'Kontakt',
+                style: TextStyle(
+                  color: textColorBlack,
+                  fontFamily: primaryFont
+                )
+                ),
+              leading: Icon(Icons.mail),
+              selected: currentRoute == ContactPage.routeName,
+              onTap: () {
+                if (currentRoute == ContactPage.routeName) return;
+                currentRoute = ContactPage.routeName;
+                Navigator.pushReplacementNamed(
+                  context,
+                  ContactPage.routeName,
+                );
+              },
+            ),
           ),
           LoginButton(window_height: window_height, window_width: window_width, width_ratio: width_ratio, height_ratio: height_ratio,)
         ],
