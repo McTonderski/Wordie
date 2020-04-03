@@ -32,7 +32,7 @@ class AboutMeView extends StatelessWidget{
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       backgroundColor: primaryBackgroundColor,
-      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+      appBar: NavBarWordie(),
       drawer: DrawerItemList(),
       body: SafeArea(
         child: Center(

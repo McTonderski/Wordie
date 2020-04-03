@@ -150,7 +150,7 @@ class DrawerItemList extends StatelessWidget {
               },
             ),
           ),
-          LoginButton(window_height: window_height, window_width: window_width, width_ratio: width_ratio, height_ratio: height_ratio,)
+          LoginButton(width_ratio: width_ratio, height_ratio: height_ratio,)
         ],
       ),
     );

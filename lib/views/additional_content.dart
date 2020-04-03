@@ -45,7 +45,7 @@ class _AddonPageState extends State<AddonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawerScrimColor: Colors.transparent,
-      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+      appBar: NavBarWordie(),
       drawer: DrawerItemList(),
       body: Center(
         child: SingleChildScrollView(

@@ -6,11 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
 
 class LoginButton extends StatefulWidget {
-  final double window_width;
-  final double window_height;
   final double width_ratio;
   final double height_ratio;
-  LoginButton({Key key, this.window_width, this.window_height, this.width_ratio, this.height_ratio}) : super(key: key);
+  LoginButton({Key key, this.width_ratio, this.height_ratio}) : super(key: key);
 
   @override
   _LoginButtonState createState() => _LoginButtonState();
