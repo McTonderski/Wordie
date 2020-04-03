@@ -44,58 +44,59 @@ class _AddonPageState extends State<AddonPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
-        drawer: DrawerItemList(),
-        body: Center(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Text(
-                  "Dodatkowe materiały",
-                  style: TextStyle(
-                    fontSize: 48,
-                    fontFamily: 'SourceSerifPro',
-                  ),
+      drawerScrimColor: Colors.transparent,
+      appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
+      drawer: DrawerItemList(),
+      body: Center(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Text(
+                "Dodatkowe materiały",
+                style: TextStyle(
+                  fontSize: 48,
+                  fontFamily: 'SourceSerifPro',
                 ),
-                Center(child: LayoutBuilder(builder: (context, constraints) {
-                  if (constraints.maxWidth > 600) {
-                    return SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: ClipRect(
-                            child: Container(
-                                width: constraints.maxWidth,
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: <Widget>[
-                                      addon('Wszystkie', AllAddonPage.routeName),
-                                      addon('Darmowe')
-                                    ]))));
-                  } else {
-                    return SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              addon('Wszystkie', AllAddonPage.routeName),
-                              addon('Darmowe', () {})
-                            ]));
-                  }
-                })
-                    // child: Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    //   children: <Widget>[
+              ),
+              Center(child: LayoutBuilder(builder: (context, constraints) {
+                if (constraints.maxWidth > 600) {
+                  return SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: ClipRect(
+                          child: Container(
+                              width: constraints.maxWidth,
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    addon('Wszystkie', AllAddonPage.routeName),
+                                    addon('Darmowe')
+                                  ]))));
+                } else {
+                  return SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            addon('Wszystkie', AllAddonPage.routeName),
+                            addon('Darmowe', () {})
+                          ]));
+                }
+              })
+                  // child: Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //   children: <Widget>[
 
-                    //     addon('Wszystkie'),
-                    //     addon('Darmowe')
-                    //   ],
-                    // ),
-                    )
-              ],
-            ),
+                  //     addon('Wszystkie'),
+                  //     addon('Darmowe')
+                  //   ],
+                  // ),
+                  )
+            ],
           ),
-        ));
+        ),
+      ));
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
+import 'package:wordie/widgets/login_button.dart';
 
 class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
   final Text title;
@@ -43,18 +44,7 @@ class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
                         ),
                       ),
                     ),
-                    FlatButton(
-                      onPressed: () {},
-                      color: navBarLogInColor,
-                      padding: EdgeInsets.fromLTRB(40*width_ratio, 3*height_ratio, 40*width_ratio, 2*height_ratio),
-                      child: Text(
-                        'Zaloguj się',
-                        style: TextStyle(
-                          fontFamily: primaryFont,
-                          fontSize: 18*sqrt(height_ratio)
-                        )
-                      )
-                    )
+                    LoginButton(window_height: window_height, window_width: window_width, width_ratio: width_ratio, height_ratio: height_ratio,)
                   ],
                 ),
               ),

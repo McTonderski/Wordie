@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -21,17 +22,14 @@ class _LoginButtonState extends State<LoginButton> {
     return FlatButton(
       onPressed: () {},
       color: navBarLogInColor,
-      padding: EdgeInsets.fromLTRB(40*width_ratio, 3*height_ratio, 40*width_ratio, 2*height_ratio),
+      padding: EdgeInsets.fromLTRB(40*widget.width_ratio, 3*widget.height_ratio, 40*widget.width_ratio, 2*widget.height_ratio),
       child: Text(
         'Zaloguj się',
         style: TextStyle(
           fontFamily: primaryFont,
-          fontSize: 18*sqrt(height_ratio)
+          fontSize: 18*sqrt(widget.height_ratio)
         )
       )
-    )
-  ],
-),
-);
+    );
   }
 }
