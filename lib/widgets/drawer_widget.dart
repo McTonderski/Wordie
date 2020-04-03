@@ -22,7 +22,7 @@ class DrawerItemList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String currentRoute = getCurrentRouteName(context);
+    String currentRoute = AboutMeView.routeName;
 
     
     double window_width = MediaQuery.of(context).size.width;

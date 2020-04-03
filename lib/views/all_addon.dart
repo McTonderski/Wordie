@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordie/widgets/drawer_widget.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 
 class AllAddonPage extends StatefulWidget {
@@ -68,6 +69,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawerScrimColor: Colors.transparent,
+      drawer: DrawerItemList(),
       appBar: NavBarWordie(title: Text('Wordie'), widgets: <Widget>[],),
       body: Center(
           child: SingleChildScrollView(
