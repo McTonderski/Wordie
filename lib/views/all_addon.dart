@@ -83,6 +83,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
               children: <Widget>[
                 Text(
                   "Dodatkowe materiały",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 48,
                     fontFamily: 'SourceSerifPro',
