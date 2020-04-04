@@ -39,6 +39,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
           ),
           Text(
             textMain,
+            textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 25,
                 fontFamily: 'SourceSerifPro',
@@ -90,7 +91,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
                   ),
                 ),
                 Text(
-                  "Wszystkie",
+                  "Wszystkiae",
                   style: TextStyle(
                     fontSize: 35,
                     fontFamily: 'SourceSerifPro',
