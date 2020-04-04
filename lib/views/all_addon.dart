@@ -91,7 +91,7 @@ class _AllAddonPageState extends State<AllAddonPage> {
                   ),
                 ),
                 Text(
-                  "Wszystkiae",
+                  "Wszystkie",
                   style: TextStyle(
                     fontSize: 35,
                     fontFamily: 'SourceSerifPro',
