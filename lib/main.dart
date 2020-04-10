@@ -5,7 +5,7 @@ import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/drawer_widget.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/views/about_me_view.dart';
-
+import 'package:wordie/views/Question_Page.dart';
 import 'views/about_me_view.dart';
 import 'views/all_addon.dart';
 
@@ -19,12 +19,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AboutMeView.routeName,
+      initialRoute: QuestionPage.routeName,
       routes: {
         ContactPage.routeName: (context) => ContactPage(),
         AboutMeView.routeName: (context) => AboutMeView(),
         AllAddonPage.routeName: (context) => AllAddonPage(),
-        AddonPage.routeName:(context)=>AddonPage()
+        AddonPage.routeName:(context)=>AddonPage(),
+        QuestionPage.routeName: (context) => QuestionPage(),
       },
     );
   }

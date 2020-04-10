@@ -114,7 +114,7 @@ class _ContactState extends State<ContactPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 textFieldUsed("Imie i Nazwisko"),
-                                textFieldUsed("Emaillll"),
+                                textFieldUsed("Email"),
                                 textFieldUsed("Telefon"),
                                 multilineText("Wiadomość"),
                                 Container(
