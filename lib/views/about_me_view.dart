@@ -9,7 +9,7 @@ import '../widgets/drawer_widget.dart';
 
 class AboutMeView extends StatelessWidget{
 
-  static const routeName = '/about_me';
+  static const routeName = 'about_me';
 
   final  List<String> ABOUT_ME = ['Mam na imię Angelika, choć większość osob nazywa mnie Angie.',
                                   "",

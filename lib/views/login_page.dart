@@ -1,7 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
 import 'package:wordie/views/all_addon.dart';
 import 'package:wordie/widgets/nav_bar.dart';
+import 'package:wordie/widgets/inputEmail.dart';
 
 import '../widgets/drawer_widget.dart';
 import '../widgets/nav_bar.dart';
@@ -34,8 +37,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               onPressed: () {
                 if (nextPage != '') {
-                  Navigator.pushReplacementNamed(context,nextPage
-                      );
+                  Navigator.pushReplacementNamed(context, nextPage);
                 }
               },
             ),
@@ -45,61 +47,24 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      drawerScrimColor: Colors.transparent,
-      appBar: NavBarWordie(),
-      backgroundColor: primaryBackgroundColor,
-      drawer: DrawerItemList(),
-      body: Center(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Text(
-                "Dodatkowe materiały",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 48,
-                  fontFamily: 'SourceSerifPro',
-                ),
-              ),
-              Center(child: LayoutBuilder(builder: (context, constraints) {
-                if (constraints.maxWidth > 600) {
-                  return SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: ClipRect(
-                          child: Container(
-                              width: constraints.maxWidth,
-                              child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: <Widget>[
-                                    addon('Wszystkie', AllAddonPage.routeName),
-                                    addon('Darmowe')
-                                  ]))));
-                } else {
-                  return SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            addon('Wszystkie', AllAddonPage.routeName),
-                            addon('Darmowe', () {})
-                          ]));
-                }
-              })
-                  // child: Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //   children: <Widget>[
-
-                  //     addon('Wszystkie'),
-                  //     addon('Darmowe')
-                  //   ],
-                  // ),
-                  )
-            ],
+        drawerScrimColor: Colors.transparent,
+        appBar: NavBarWordie(),
+        backgroundColor: primaryBackgroundColor,
+        drawer: DrawerItemList(),
+        body: Center(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                TextField(
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-      ));
+        ));
   }
 }
