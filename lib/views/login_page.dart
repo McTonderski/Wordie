@@ -3,6 +3,8 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
 import 'package:wordie/views/all_addon.dart';
+import 'package:wordie/widgets/inputPassword.dart';
+import 'package:wordie/widgets/login_button_login_screen.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/widgets/inputEmail.dart';
 
@@ -47,24 +49,17 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        drawerScrimColor: Colors.transparent,
-        appBar: NavBarWordie(),
-        backgroundColor: primaryBackgroundColor,
-        drawer: DrawerItemList(),
-        body: Center(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                TextField(
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                )
-              ],
-            ),
-          ),
-        ));
+      drawerScrimColor: Colors.transparent,
+      appBar: NavBarWordie(),
+      backgroundColor: primaryBackgroundColor,
+      drawer: DrawerItemList(),
+      body: Align(
+          alignment: Alignment.topCenter,
+          child: Column(children: <Widget>[
+            InputEmail(), 
+            InputPassword(),
+            LoginButtonLogIn(),
+            ])),
+    );
   }
 }

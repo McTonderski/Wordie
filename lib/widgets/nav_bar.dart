@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:wordie/design/design.dart';
-import 'package:wordie/widgets/login_button.dart';
+import 'package:wordie/widgets/login_button_drawer.dart';
 
 class NavBarWordie extends StatelessWidget implements PreferredSizeWidget{
 

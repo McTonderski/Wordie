@@ -4,7 +4,7 @@ import 'package:wordie/views/Contact_Page.dart';
 import 'package:wordie/views/about_me_view.dart';
 import 'package:wordie/views/additional_content.dart';
 import 'package:wordie/views/all_addon.dart';
-import 'package:wordie/widgets/login_button.dart';
+import 'package:wordie/widgets/login_button_drawer.dart';
 import '../views/about_me_view.dart';
 import '../views/additional_content.dart';
 

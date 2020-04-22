@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class InputEmail extends StatefulWidget {
+class InputPassword extends StatefulWidget {
   @override
-  _InputEmailState createState() => _InputEmailState();
+  _InputPasswordState createState() => _InputPasswordState();
 }
 
-class _InputEmailState extends State<InputEmail> {
+class _InputPasswordState extends State<InputPassword> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +19,7 @@ class _InputEmailState extends State<InputEmail> {
               color: Colors.black54,
             ),
             decoration: InputDecoration(
-              labelText: 'Email',
+              labelText: 'Password',
               border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.black26)),
               filled: true,
