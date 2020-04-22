@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 //colors
 final Color primaryBackgroundColor = Color(0xFFE5E5E5);
+final Color registerButtonColor = Color(0x55835400);
 final Color navBarLogInColor = Color(0xFFE1CC82);
 final Color drawerColor = Color(0xFF558354);
 final Color textColorBlack = Color(0xFF1A1A1A);

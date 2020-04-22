@@ -5,28 +5,28 @@ import 'package:flutter/material.dart';
 import 'package:wordie/views/login_page.dart';
 import 'package:wordie/design/design.dart';
 
-class LoginButtonLogIn extends StatefulWidget {
+class RegisterButtonLogIn extends StatefulWidget {
   final double width_ratio;
   final double height_ratio;
-  LoginButtonLogIn({Key key, this.width_ratio, this.height_ratio})
+  RegisterButtonLogIn({Key key, this.width_ratio, this.height_ratio})
       : super(key: key);
 
   @override
-  _LoginButtonState createState() => _LoginButtonState();
+  _RegisterButtonState createState() => _RegisterButtonState();
 }
 
-class _LoginButtonState extends State<LoginButtonLogIn> {
+class _RegisterButtonState extends State<RegisterButtonLogIn> {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: () {},
-      color: navBarLogInColor,
+      color: registerButtonColor,
       padding: EdgeInsets.fromLTRB(
           50 * widget.width_ratio,
           3 * widget.height_ratio,
           50 * widget.width_ratio,
           2 * widget.height_ratio),
-      child: Text('Zaloguj się',
+      child: Text('Zarejestruj się',
           style: TextStyle(
               fontFamily: primaryFont,
               fontSize: 18 * sqrt(widget.height_ratio))),

@@ -7,6 +7,7 @@ import 'package:wordie/widgets/inputPassword.dart';
 import 'package:wordie/widgets/login_button_login_screen.dart';
 import 'package:wordie/widgets/nav_bar.dart';
 import 'package:wordie/widgets/inputEmail.dart';
+import 'package:wordie/widgets/register_button.dart';
 
 import '../widgets/drawer_widget.dart';
 import '../widgets/nav_bar.dart';
@@ -20,6 +21,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  
   Widget addon(textIn, [nextPage]) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
@@ -48,6 +50,10 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget build(BuildContext context) {
+    double window_width = MediaQuery.of(context).size.width;
+    double window_height = MediaQuery.of(context).size.height;
+    double width_ratio = window_width/WINDOW_WIDTH;
+    double height_ratio = window_height/WINDOW_HEIGHT;
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       appBar: NavBarWordie(),
@@ -58,7 +64,10 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(children: <Widget>[
             InputEmail(), 
             InputPassword(),
-            LoginButtonLogIn(),
+            LoginButtonLogIn(width_ratio: width_ratio, height_ratio: height_ratio,),
+            SizedBox(height: 15.0,),
+            Text("New here?"),
+            RegisterButtonLogIn(width_ratio: width_ratio, height_ratio: height_ratio,)
             ])),
     );
   }

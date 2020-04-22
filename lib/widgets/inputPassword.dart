@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class InputPassword extends StatefulWidget {
   @override
@@ -21,9 +22,10 @@ class _InputPasswordState extends State<InputPassword> {
             decoration: InputDecoration(
               labelText: 'Password',
               border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black26)),
+                
+              ),
               filled: true,
-              fillColor: Colors.yellow[200],
+              fillColor: Colors.yellow[100],
               hoverColor: Colors.yellow[100],
               labelStyle: TextStyle(
                 color: Colors.black87,
